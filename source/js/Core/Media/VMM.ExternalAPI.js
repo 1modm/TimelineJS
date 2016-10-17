@@ -166,7 +166,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 						
 			getOEmbed: function(tweet, callback) {
 				
-				var the_url = "//api.twitter.com/1/statuses/oembed.json?id=" + tweet.mid + "&omit_script=true&include_entities=true&callback=?",
+				var the_url = "https://api.twitter.com/1/statuses/oembed.json?id=" + tweet.mid + "&omit_script=true&include_entities=true&callback=?",
 					twitter_timeout	= setTimeout(VMM.ExternalAPI.twitter.errorTimeOutOembed, VMM.master_config.timers.api, tweet);
 					//callback_timeout= setTimeout(callback, VMM.master_config.timers.api, tweet);
 				
@@ -210,7 +210,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 			
 			getHTML: function(id) {
 				//var the_url = document.location.protocol + "//api.twitter.com/1/statuses/oembed.json?id=" + id+ "&callback=?";
-				var the_url = "//api.twitter.com/1/statuses/oembed.json?id=" + id+ "&omit_script=true&include_entities=true&callback=?";
+				var the_url = "https://api.twitter.com/1/statuses/oembed.json?id=" + id+ "&omit_script=true&include_entities=true&callback=?";
 				VMM.getJSON(the_url, VMM.ExternalAPI.twitter.onJSONLoaded);
 			},
 			
@@ -1566,7 +1566,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 				
 				// VIDEO
 				// TODO: NEED TO ADD ASYNC SCRIPT TO TIMELINE FLOW
-				VMM.attachElement("#" + m.uid, "<iframe frameborder='0' width='100%' height='100%' src='" + video_url + "'></iframe><script async src='http://platform.vine.co/static/scripts/embed.js' charset='utf-8'></script>");
+				VMM.attachElement("#" + m.uid, "<iframe frameborder='0' width='100%' height='100%' src='" + video_url + "'></iframe><script async src='https://platform.vine.co/static/scripts/embed.js' charset='utf-8'></script>");
 				
 			},
 			
